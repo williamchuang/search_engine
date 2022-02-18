@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Text Properties</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="../color-background/index.html">
+<link rel=Next href="../box/index.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="Descriptions of the text properties of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, text properties, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Text Properties<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<ul>
+<li><a href="#word-spacing">Word Spacing</a></li>
+<li><a href="#letter-spacing">Letter Spacing</a></li>
+<li><a href="#text-decoration">Text Decoration</a></li>
+<li><a href="#vertical-align">Vertical Alignment</a></li>
+<li><a href="#text-transform">Text Transformation</a></li>
+<li><a href="#text-align">Text Alignment</a></li>
+<li><a href="#text-indent">Text Indentation</a></li>
+<li><a href="#line-height">Line Height</a></li>
+</ul>
+<hr>
+<h2><a name="word-spacing">Word Spacing</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>word-spacing: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>normal | <a href="../units.html#length">&lt;length&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>normal<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>word-spacing</strong> property defines an additional amount of space between words. The value must be in the <a href="../units.html#length">length</a> format; negative values are permitted.</p>
+<p>Examples:</p>
+<pre><code class=css>P EM   { word-spacing: 0.4em }
+P.note { word-spacing: -0.2em }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="letter-spacing">Letter Spacing</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>letter-spacing: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>normal | <a href="../units.html#length">&lt;length&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>normal<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>letter-spacing</strong> property defines an additional amount of space between characters. The value must be in the <a href="../units.html#length">length</a> format; negative values are permitted. A setting of <strong class=css>0</strong> will prevent justification.</p>
+<p>Examples:</p>
+<pre><code class=css>H1     { letter-spacing: 0.1em }
+P.note { letter-spacing: -0.1em }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="text-decoration">Text Decoration</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>text-decoration: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="text-decoration: none">none</span> | [ <span style="text-decoration: underline">underline</span> || <span style="text-decoration: overline">overline</span> || <span style="text-decoration: line-through">line-through</span> || <span style="text-decoration: blink">blink</span> ]<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="text-decoration: none">none</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>text-decoration</strong> property allows text to be decorated through one of five properties: <strong class=css><span style="text-decoration: underline">underline</span></strong>, <strong class=css><span style="text-decoration: overline">overline</span></strong>, <strong class=css><span style="text-decoration: line-through">line-through</span></strong>, <strong class=css><span style="text-decoration: blink">blink</span></strong>, or the default, <strong class=css><span style="text-decoration: none">none</span></strong>.</p>
+<p>For example, one can suggest that links not be underlined with</p>
+<pre><code class=css>A:link, A:visited, A:active { text-decoration: none }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="vertical-align">Vertical Alignment</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>vertical-align: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="vertical-align: baseline">baseline</span> | <span style="vertical-align: sub">sub</span> | <span style="vertical-align: super">super</span> | <span style="vertical-align: top">top</span> | <span style="vertical-align: text-top">text-top</span> | <span style="vertical-align: middle">middle</span> | <span style="vertical-align: bottom">bottom</span> | <span style="vertical-align: text-bottom">text-bottom</span> | <a href="../units.html#percentage">&lt;percentage&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>baseline<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Inline elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>vertical-align</strong> property may be used to alter the vertical positioning of an inline element, relative to its parent element or to the element's line. (An <dfn>inline element</dfn> is one which has no line break before and after it, for example, <strong class=html>EM</strong>, <strong class=html>A</strong>, and <strong class=html>IMG</strong> in HTML.)</p>
+<p>The value may be a <a href="../units.html#percentage">percentage</a> relative to the element's <strong class=css><a href="#line-height">line-height</a></strong> property, which would raise the element's baseline the specified amount above the parent's baseline. Negative values are permitted.</p>
+<p>The value may also be a keyword. The following keywords affect the positioning relative to the parent element:</p>
+<ul>
+<li><strong class=css>baseline</strong> (align baselines of element and parent)</li>
+<li><strong class=css>middle</strong> (align vertical midpoint of element with baseline plus half the x-height--the height of the letter "x"--of the parent)</li>
+<li><strong class=css>sub</strong> (subscript)</li>
+<li><strong class=css>super</strong> (superscript)</li>
+<li><strong class=css>text-top</strong> (align tops of element and parent's font)</li>
+<li><strong class=css>text-bottom</strong> (align bottoms of element and parent's font)</li>
+</ul>
+<p>The keywords affecting the positioning relative to the element's line are</p>
+<ul>
+<li><strong class=css>top</strong> (align top of element with tallest element on the line)</li>
+<li><strong class=css>bottom</strong> (align bottom of element with lowest element on the line)</li>
+</ul>
+<p>The <strong class=css>vertical-align</strong> property is particularly useful for aligning images. Some examples follow:</p>
+<pre><code class=css>IMG.middle { vertical-align: middle }
+IMG        { vertical-align: 50% }
+.exponent  { vertical-align: super }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="text-transform">Text Transformation</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>text-transform: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>none | <span style="text-transform: capitalize">capitalize</span> | <span style="text-transform: uppercase">uppercase</span> | <span style="text-transform: lowercase">lowercase</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>none<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>text-transform</strong> property allows text to be transformed by one of four properties:</p>
+<ul>
+<li><strong class=css>capitalize</strong> (capitalizes first character of each word)</li>
+<li><strong class=css>uppercase</strong> (capitalizes all characters of each word)</li>
+<li><strong class=css>lowercase</strong> (uses small letters for all characters of each word)</li>
+<li><strong class=css>none</strong> (the initial value)</li>
+</ul>
+<p>Examples:</p>
+<pre><code class=css>H1 { text-transform: uppercase }
+H2 { text-transform: capitalize }</code></pre>
+<p>The <strong class=css>text-transform</strong> property should only be used to express a stylistic desire. It would be inappropriate, for example, to use <strong class=css>text-transform</strong> to capitalize a list of countries or names.</p>
+<hr width="67%" align=center>
+<h2><a name="text-align">Text Alignment</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>text-align: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>left | right | center | justify<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Determined by browser<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Block-level elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>text-align</strong> property can be applied to <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level elements</a> (<strong class=html>P</strong>, <strong class=html>H1</strong>, etc.) to give the alignment of the element's text. This property is similar in function to HTML's <strong class=html>ALIGN</strong> attribute on paragraphs, headings, and divisions.</p>
+<p>Some examples follow:</p>
+<pre><code class=css>H1          { text-align: center }
+P.newspaper { text-align: justify }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="text-indent">Text Indentation</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>text-indent: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><a href="../units.html#length">&lt;length&gt;</a> | <a href="../units.html#percentage">&lt;percentage&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>0<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Block-level elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>text-indent</strong> property can be applied to <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level elements</a> (<strong class=html>P</strong>, <strong class=html>H1</strong>, etc.) to define the amount of indentation that the first line of the element should receive. The value must be a <a href="../units.html#length">length</a> or a <a href="../units.html#percentage">percentage</a>; percentages refer to the parent element's width. A common use of <strong class=css>text-indent</strong> would be to indent a paragraph:</p>
+<pre><code class=css>P { text-indent: 5em }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="line-height">Line Height</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>line-height: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>normal | &lt;number&gt; | <a href="../units.html#length">&lt;length&gt;</a> | <a href="../units.html#percentage">&lt;percentage&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>normal<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>line-height</strong> property will accept a value to control the spacing between baselines of text. When the value is a number, the line height is calculated by multiplying the element's font size by the number. Percentage values are relative to the element's font size. Negative values are not permitted.</p>
+<p>Line height may also be given in the <strong class=css><a href="../font/font.html">font</a></strong> property along with a font size.</p>
+<p>The <strong class=css>line-height</strong> property could be used to double space text:</p>
+<pre><code class=css>P { line-height: 200% }</code></pre>
+<p class=note><a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a>&#160;3.x incorrectly treats number values and values with <strong class=css>em</strong> or <strong class=css>ex</strong> units as pixel values. This bug can easily make pages unreadable, and so authors should avoid provoking it wherever possible; percentage units are often a good choice.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

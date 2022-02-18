@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Font Size</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="font-weight.html">
+<link rel=Next href="font.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the font-size property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, font-size property, font size, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Font Size<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-size: &lt;absolute-size&gt; | &lt;relative-size&gt; | &lt;length&gt; | &lt;percentage&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>
+<ul>
+<li>&lt;absolute-size&gt;
+		<ul><li><span style="font-size: xx-small">xx-small</span> | <span style="font-size: x-small">x-small</span> | <span style="font-size: small">small</span> | <span style="font-size: medium">medium</span> | <span style="font-size: large">large</span> | <span style="font-size: x-large">x-large</span> | <span style="font-size: xx-large">xx-large</span></ul>
+<li>&lt;relative-size&gt;
+		<ul><li><span style="font-size: larger">larger</span> | <span style="font-size: smaller">smaller</span></ul>
+<li><a href="../units.html#length">&lt;length&gt;</a>
+<li><a href="../units.html#percentage">&lt;percentage&gt;</a> (in relation to parent element)
+</ul>
+	<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-size: medium">medium</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-size</strong> property is used to modify the size of the displayed font. Absolute lengths (using units like <strong class=css>pt</strong> and <strong class=css>in</strong>) should be used sparingly due to their weakness in adapting to different browsing environments. Fonts with absolute lengths can very easily be too small or too large for a user.</p>
+<p>Some example size assignments would be:</p>
+<pre><code class=css>H1     { font-size: large }
+P      { font-size: 12pt }
+LI     { font-size: 90% }
+STRONG { font-size: larger }</code></pre>
+<div class=note>
+<p>Authors should be aware that <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a>&#160;3.x incorrectly treats <strong class=css>em</strong> and <strong class=css>ex</strong> units as pixels, which can easily make text using these units unreadable. The browser also incorrectly applies percentage values relative to its default font size for the selector, rather than relative to the parent element's font size. This makes rules like</p>
+<pre><code class=css>H1 { font-size: 200% }</code></pre>
+<p>dangerous in that the size will be twice IE's default font size for level-one headings, rather than twice the parent element's font size. In this case, <strong class=html>BODY</strong> would most likely be the parent element, and it would likely define a <strong class=css>medium</strong> font size, whereas the default level-one heading font size imposed by IE would probably be considered <strong class=css>xx-large</strong>.</p>
+<p>Given these bugs, authors should take care in using percentage values for <strong class=css>font-size</strong>, and should probably avoid <strong class=css>em</strong> and <strong class=css>ex</strong> units for this property.</p>
+</div>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Height</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="width.html">
+<link rel=Next href="float.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the height property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, height property, answer">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Height<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>height: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><a href="../units.html#length">&lt;length&gt;</a> | auto<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>auto<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Block-level and replaced elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>Each <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level</a> or replaced element can be given a height, specified as a <a href="../units.html#length">length</a> or as <strong class=css>auto</strong>. (A <dfn>replaced element</dfn> is one for which only the intrinsic dimensions are known; HTML replaced elements include <strong class=html>IMG</strong>, <strong class=html>INPUT</strong>, <strong class=html>TEXTAREA</strong>, <strong class=html>SELECT</strong>, and <strong class=html>OBJECT</strong>.) The initial value for the <strong class=css>height</strong> property is <strong class=css>auto</strong>, which results in the element's intrinsic height (<i>i.e.</i>, the height of the element itself, for example the height of an image). Negative lengths are not allowed.</p>
+<p>As with the <strong class=css><a href="width.html">width</a></strong> property, <strong class=css>height</strong> can be used to scale an image:</p>
+<pre><code class=css>IMG.foo { width: 40px; height: 40px }</code></pre>
+<p>In most cases, authors are advised to scale the image in an image editing program, since browsers will not likely scale images with high quality, and since scaling down causes the user to download an unnecessarily large file. However, scaling through the <strong class=css>width</strong> and <strong class=css>height</strong> properties is a useful option for user-defined style sheets in order to overcome vision problems.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Vertical Alignment</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="letter-spacing.html">
+<link rel=Next href="text-transform.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the vertical-align property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, vertical-align property, vertical alignment, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Vertical Alignment<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>vertical-align: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="vertical-align: baseline">baseline</span> | <span style="vertical-align: sub">sub</span> | <span style="vertical-align: super">super</span> | <span style="vertical-align: top">top</span> | <span style="vertical-align: text-top">text-top</span> | <span style="vertical-align: middle">middle</span> | <span style="vertical-align: bottom">bottom</span> | <span style="vertical-align: text-bottom">text-bottom</span> | <a href="../units.html#percentage">&lt;percentage&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>baseline<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Inline elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>vertical-align</strong> property may be used to alter the vertical positioning of an inline element, relative to its parent element or to the element's line. (An <dfn>inline element</dfn> is one which has no line break before and after it, for example, <strong class=html>EM</strong>, <strong class=html>A</strong>, and <strong class=html>IMG</strong> in HTML.)</p>
+<p>The value may be a <a href="../units.html#percentage">percentage</a> relative to the element's <strong class=css><a href="line-height.html">line-height</a></strong> property, which would raise the element's baseline the specified amount above the parent's baseline. Negative values are permitted.</p>
+<p>The value may also be a keyword. The following keywords affect the positioning relative to the parent element:</p>
+<ul>
+<li><strong class=css>baseline</strong> (align baselines of element and parent)</li>
+<li><strong class=css>middle</strong> (align vertical midpoint of element with baseline plus half the x-height--the height of the letter "x"--of the parent)</li>
+<li><strong class=css>sub</strong> (subscript)</li>
+<li><strong class=css>super</strong> (superscript)</li>
+<li><strong class=css>text-top</strong> (align tops of element and parent's font)</li>
+<li><strong class=css>text-bottom</strong> (align bottoms of element and parent's font)</li>
+</ul>
+<p>The keywords affecting the positioning relative to the element's line are</p>
+<ul>
+<li><strong class=css>top</strong> (align top of element with tallest element on the line)</li>
+<li><strong class=css>bottom</strong> (align bottom of element with lowest element on the line)</li>
+</ul>
+<p>The <strong class=css>vertical-align</strong> property is particularly useful for aligning images. Some examples follow:</p>
+<pre><code class=css>IMG.middle { vertical-align: middle }
+IMG        { vertical-align: 50% }
+.exponent  { vertical-align: super }</code></pre>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

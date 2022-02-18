@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>CSS Quick Tutorial</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="index.html">
+<link rel=Up href="index.html">
+<link rel=Prev href="stylesheets-now.html">
+<link rel=Next href="structure.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="style.css" type="text/css">
+<link rel=StyleSheet href="aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A quick tutorial for learning how to use Cascading Style Sheets.">
+<meta name="keywords" content="css1 tutorial, web design group, wdg, style, stylesheet, style sheet, css, cascading style sheets">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>CSS Quick Tutorial<img src="css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<p>A style sheet is made up of style rules that tell a browser how to present a document. There are various <a href="style-html.html">ways of linking these style rules to your HTML documents</a>, but the simplest method for starting out is to use HTML's <strong class=html>STYLE</strong> element. This element is placed in the document <strong class=html>HEAD</strong>, and it contains the style rules for the page.</p>
+<p class=note>Note that while the <strong class=html>STYLE</strong> element is a good method of experimenting with style sheets, it has disadvantages that should be considered before one uses this method in practice. The advantages and disadvantages of the various methods are discussed in the section on <a href="style-html.html">linking style sheets to HTML</a>.</p>
+<p>Each rule is made up of a <dfn>selector</dfn>--usually an HTML element such as <strong class=html>BODY</strong>, <strong class=html>P</strong>, or <strong class=html>EM</strong>--and the style to be applied to the selector.</p>
+<p>There are numerous <a href="properties.html"><dfn>properties</dfn></a> that may be defined for an element. Each property takes a <dfn>value</dfn>, which together with the property describes how the selector should be presented.</p>
+<p>Style rules are formed as follows:</p>
+<pre><code class=css>selector { property: value }</code></pre>
+<p>Multiple style declarations for a single selector may be separated by a semicolon:</p>
+<p class=example><code class=css>selector { property1: value1; property2: value2 }</code></p>
+<p>As an example, the following code segment defines the <strong class=css>color</strong> and <strong class=css>font-size</strong> properties for <strong class=html>H1</strong> and <strong class=html>H2</strong> elements:</p>
+<pre class=example><code class=html>&lt;HEAD&gt;
+&lt;TITLE&gt;CSS Example&lt;/TITLE&gt;
+&lt;STYLE TYPE="text/css"&gt;</code>
+<code class=css>  H1 { font-size: x-large; color: red }
+  H2 { font-size: large; color: blue }</code>
+<code class=html>&lt;/STYLE&gt;
+&lt;/HEAD&gt;</code></pre>
+<p>The above style sheet tells the browser to show level-one headings in an extra-large, red font, and to show level-two headings in a large, blue font. The <a href="http://www.w3.org/TR/REC-CSS1">CSS1 Specification</a> formally defines all <a href="http://www.w3.org/TR/REC-CSS1#css1-properties">properties and values</a> available. The properties and values are also given in the <a href="properties.html">CSS Properties</a> section of this site.</p>
+<p>This tutorial is intended as a very basic introduction to Cascading Style Sheets and should provide enough information to allow you to experiment with a few of your own styles. For a more in-depth look at Cascading Style Sheets, read the following sections:</p>
+<ul>
+<li><a href="structure.html">CSS Structure and Rules</a></li>
+<li><a href="properties.html">CSS Properties</a></li>
+<li><a href="style-html.html">Linking Style Sheets to HTML</a></li>
+</ul>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="index.html">CSS&#160;Index</a>&#160;~ <a href="structure.html">CSS&#160;Structure</a>&#160;~ <a href="properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997-98 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

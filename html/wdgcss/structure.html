@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>CSS Structure and Rules</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="index.html">
+<link rel=Up href="index.html">
+<link rel=Prev href="quick-tutorial.html">
+<link rel=Next href="properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="style.css" type="text/css">
+<link rel=StyleSheet href="aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="The structure and rules of Cascading Style Sheets, including an introduction to the various kinds of selectors, pseudo-classes, pseudo-elements, and cascading order.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, selectors, simple, contextual, id, rules, declarations, properties, values, grouping, inheritance, comments, pseudo-classes, pseudo-elements, cascade, order, answer">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>CSS Structure and Rules<img src="css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<p align=center>[ <a href="#syntax">Basic&#160;Syntax</a> | <a href="#pseudo">Pseudo-classes&#160;and&#160;Pseudo-elements</a> | <a href="#cascade">Cascading&#160;Order</a>&#160;]</p>
+<hr width="67%" align=center>
+<h2><a name="syntax">Basic Syntax</a></h2>
+<h3>Rules</h3>
+<h4>Selectors</h4>
+<p>Any HTML element is a possible CSS1 selector. The <dfn>selector</dfn> is simply the element that is linked to a particular style. For example, the selector in</p>
+<pre><code class=css>P { text-indent: 3em }</code></pre>
+<p>is <strong class=css>P</strong>.</p>
+<h5>Class Selectors</h5>
+<p>A simple selector can have different <dfn>classes</dfn>, thus allowing the same element to have different styles. For example, an author may wish to display code in a different color depending on its language:</p>
+<pre><code class=css>code.html { color: #191970 }
+code.css  { color: #4b0082 }</code></pre>
+<p>The above example has created two classes, <strong class=css>css</strong> and <strong class=css>html</strong> for use with HTML's <strong class=html>CODE</strong> element. The <strong class=html><a href="style-html.html#class">CLASS</a></strong> attribute is used in HTML to indicate the class of an element, <i>e.g.</i>,</p>
+<pre><code class=html>&lt;P CLASS=warning&gt;Only one class is allowed per selector.
+For example, code.html.proprietary is invalid.&lt;/p&gt;</code></pre>
+<p>Classes may also be declared without an associated element:</p>
+<pre><code class=css>.note { font-size: small }</code></pre>
+<p>In this case, the <strong class=css>note</strong> class may be used with any element.</p>
+<p class=note>A good practice is to name classes according to their <em>function</em> rather than their <em>appearance</em>. The <strong class=css>note</strong> class in the above example could have been named <strong class=css>small</strong>, but this name would become meaningless if the author decided to change the style of the class so that it no longer had a small font size.</p>
+<h5>ID Selectors</h5>
+<p><dfn>ID selectors</dfn> are individually assigned for the purpose of defining on a per-element basis. This selector type should only be used sparingly due to its inherent limitations. An ID selector is assigned by using the indicator "#" to precede a name. For example, an ID selector could be assigned as such:</p>
+<pre><code class=css>#svp94O { text-indent: 3em }</code></pre>
+<p>This would be referenced in HTML by the <strong class=html><a href="style-html.html#id">ID</a></strong> attribute:</p>
+<pre><code class=html>&lt;P ID=svp94O&gt;Text indented 3em&lt;/P&gt;</code></pre>
+<h5>Contextual Selectors</h5>
+<p><dfn>Contextual selectors</dfn> are merely strings of two or more simple selectors separated by white space. These selectors can be assigned normal properties and, due to the rules of cascading order, they will take precedence over simple selectors. For example, the contextual selector in</p>
+<pre><code class=css>P EM { background: yellow }</code></pre>
+<p>is <strong class=css>P EM</strong>. This rule says that emphasized text within a paragraph should have a yellow background; emphasized text in a heading would be unaffected.</p>
+<h4>Declarations</h4>
+<h5>Properties</h5>
+<p>A <dfn>property</dfn> is assigned to a selector in order to manipulate its style. Examples of <a href="properties.html">properties</a> include <strong class=css><a href="color-background/color.html">color</a></strong>, <strong class=css><a href="box/margin.html">margin</a></strong>, and <strong class=css><a href="font/font.html">font</a></strong>.</p>
+<h5>Values</h5>
+<p>The declaration <dfn>value</dfn> is an assignment that a property receives. For example, the property <strong class=css>color</strong> could receive the value <strong class=css>red</strong>.</p>
+<h3>Grouping</h3>
+<p>In order to decrease repetitious statements within style sheets, <dfn>grouping</dfn> of selectors and declarations is allowed. For example, all of the headings in a document could be given identical declarations through a grouping:</p>
+<pre><code class=css>H1, H2, H3, H4, H5, H6 {
+  color: red;
+  font-family: sans-serif }</code></pre>
+<h3>Inheritance</h3>
+<p>Virtually all selectors which are nested within selectors will inherit the property values assigned to the outer selector unless otherwise modified. For example, a <strong class=css><a href="color-background/color.html">color</a></strong> defined for the <strong class=html>BODY</strong> will also be applied to text in a paragraph.</p>
+<p>There are some cases where the inner selector does not inherit the surrounding selector's values, but these should stand out logically. For example, the <strong class=css><a href="box/margin-top.html">margin-top</a></strong> property is not inherited; intuitively, a paragraph would not have the same top margin as the document body.</p>
+<h3>Comments</h3>
+<p>Comments are denoted within style sheets with the same conventions that are used in C programming. A sample CSS1 comment would be in the format:</p>
+<pre><code class=css>/* COMMENTS CANNOT BE NESTED */</code></pre>
+<h2><a name="pseudo">Pseudo-classes and Pseudo-elements</a></h2>
+<p><dfn>Pseudo-classes</dfn> and <dfn>pseudo-elements</dfn> are special "classes" and "elements" that are automatically recognized by CSS-supporting browsers. Pseudo-classes distinguish among different element types (<i>e.g.</i>, visited links and active links represent two types of anchors). Pseudo-elements refer to sub-parts of elements, such as the first letter of a paragraph.</p>
+<p>Rules with pseudo-classes or pseudo-elements take the form</p>
+<pre><code class=css>selector:pseudo-class { property: value }</code></pre>
+<p>or</p>
+<pre><code class=css>selector:pseudo-element { property: value }</code></pre>
+<p>Pseudo-classes and pseudo-elements should not be specified with HTML's <strong class=html><a href="style-html.html#class">CLASS</a></strong> attribute. Normal classes may be used with pseudo-classes and pseudo-elements as follows:</p>
+<pre><code class=css>selector.class:pseudo-class { property: value }</code></pre>
+<p>or</p>
+<pre><code class=css>selector.class:pseudo-element { property: value }</code></pre>
+<h3>Anchor Pseudo-classes</h3>
+<p>Pseudo-classes can be assigned to the <strong class=html>A</strong> element to display links, visited links and active links differently. The anchor element can give the pseudo-classes <strong class=css>link</strong>, <strong class=css>visited</strong>, or <strong class=css>active</strong>. A visited link could be defined to render in a different color and even a different font size and style.</p>
+<p>An interesting effect could be to have a currently selected (or "active") link display in a slightly larger font size with a different color. Then, when the page is re-selected the visited link could display in a smaller font size with a different color. The sample style sheet might look like this:</p>
+<pre><code class=css>A:link    { color: red }
+A:active  { color: blue; font-size: 125% }
+A:visited { color: green; font-size: 85% }</code></pre>
+<h3>First Line Pseudo-element</h3>
+<p>Often in newspaper articles, such as those in the <cite>Wall Street Journal</cite>, the first line of text in an article is displayed in bold lettering and all capitals. CSS1 has included this capability as a pseudo-element. A <strong class=css>first-line</strong> pseudo-element may be used in any <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level element</a> (such as <strong class=html>P</strong>, <strong class=html>H1</strong>, etc.). An example of a <strong class=css>first-line</strong> pseudo-element would be:</p>
+<pre><code class=css>P:first-line {
+  font-variant: small-caps;
+  font-weight: bold }</code></pre>
+<h3>First Letter Pseudo-element</h3>
+<p>The <strong class=css>first-letter</strong> pseudo-element is used to create drop caps and other effects. The first letter of text within an assigned selector will be rendered according to the value assigned. A <strong class=css>first-letter</strong> pseudo-element may be used in any <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level element</a>. For example:</p>
+<pre><code class=css>P:first-letter { font-size: 300%; float: left }</code></pre>
+<p>would create a drop cap three times the normal font size.</p>
+<h2><a name="cascade">Cascading Order</a></h2>
+<p>When multiple style sheets are used, the style sheets may fight over control of a particular selector. In these situations, there must be rules as to which style sheet's rule will win out. The following characteristics will determine the outcome of contradictory style sheets.</p>
+<ol>
+<li><strong>! important</strong>
+<p>Rules can be designated as important by specifying <strong class=css>!&#160;important</strong>. A style that is designated as important will win out over contradictory styles of otherwise equal weight. Likewise, since both author and reader may specify important rules, the author's rule will override the reader's in cases of importance. A sample use of the <strong class=css>!&#160;important</strong> statement:</p>
+<pre><code class=css>BODY { background: url(bar.gif) white;
+       background-repeat: repeat-x ! important }</code></pre></li>
+<li><strong>Origin of Rules (Author's vs. Reader's)</strong>
+<p>As was previously mentioned, both authors and readers have the ability to specify style sheets. When rules between the two conflict, the author's rules will win out over reader's rules of otherwise equal weight. Both author's and reader's style sheets override the browser's built-in style sheets.</p>
+<p>Authors should be wary of using <strong class=css>!&#160;important</strong> rules since they will override any of the user's <strong class=css>!&#160;important</strong> rules. A user may, for example, require large font sizes or special colors due to vision problems, and such a user would likely declare certain style rules to be <strong class=css>!&#160;important</strong>, since some styles are vital for the user to be able to read a page. Any <strong class=css>!&#160;important</strong> rules will override normal rules, so authors are advised to use normal rules almost exclusively to ensure that users with special style needs are able to read the page.</p></li>
+<li><strong>Selector Rules: Calculating Specificity</strong>
+<p>Style sheets can also override conflicting style sheets based on their level of specificity, where a more specific style will always win out over a less specific one. It is simply a counting game to calculate the specificity of a selector.</p>
+<ol type="a">
+<li>Count the number of <strong class=html>ID</strong> attributes in the selector.</li>
+<li>Count the number of <strong class=html>CLASS</strong> attributes in the selector.</li>
+<li>Count the number of HTML tag names in the selector.</li>
+</ol>
+<p>Finally, write the three numbers in exact order with no spaces or commas to obtain a three digit number. (Note, you may need to convert the numbers to a larger base to end up with three digits.) The final list of numbers corresponding to selectors will easily determine specificity with the higher numbers winning out over lower numbers. Following is a list of selectors sorted by specificity:</p>
+<pre><code class=css>#id1         {xxx} /* a=1 b=0 c=0 --> specificity = 100 */
+UL UL LI.red {xxx} /* a=0 b=1 c=3 --> specificity = 013 */
+LI.red       {xxx} /* a=0 b=1 c=1 --> specificity = 011 */
+LI           {xxx} /* a=0 b=0 c=1 --> specificity = 001 */
+</code></pre></li>
+<li><strong>Order of Specification</strong>
+<p>To make it easy, when two rules have the same weight, the last rule specified wins.</p></li>
+</ol>
+<hr width="67%" align=center>
+<p align=center>[ <a href="#syntax">Basic&#160;Syntax</a> | <a href="#pseudo">Pseudo-classes&#160;and&#160;Pseudo-elements</a> | <a href="#cascade">Cascading&#160;Order</a>&#160;]</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="index.html">CSS&#160;Index</a>&#160;~ <a href="structure.html">CSS&#160;Structure</a>&#160;~ <a href="properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

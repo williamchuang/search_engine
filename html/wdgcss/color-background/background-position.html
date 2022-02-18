@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Background Position</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="background-attachment.html">
+<link rel=Next href="background.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the background-position property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, background-position property, background position, answer">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Background Position<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-position: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>[<a href="../units.html#percentage">&lt;percentage&gt;</a> | <a href="../units.html#length">&lt;length&gt;</a>]{1,2} | [top | center | bottom] || [left | center | right]<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>0% 0%<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Block-level and replaced elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-position</strong> property gives the initial position of a specified <a href="background-image.html">background image</a>. This property may only be applied to <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level elements</a> and replaced elements. (A <dfn>replaced element</dfn> is one for which only the intrinsic dimensions are known; HTML replaced elements include <strong class=html>IMG</strong>, <strong class=html>INPUT</strong>, <strong class=html>TEXTAREA</strong>, <strong class=html>SELECT</strong>, and <strong class=html>OBJECT</strong>.)</p>
+<p>The easiest way to assign a background position is with keywords:</p>
+<ul>
+<li>Horizontal keywords (<strong class=css>left</strong>, <strong class=css>center</strong>, <strong class=css>right</strong>)</li>
+<li>Vertical keywords (<strong class=css>top</strong>, <strong class=css>center</strong>, <strong class=css>bottom</strong>)</li>
+</ul>
+<p><a href="../units.html#percentage">Percentages</a> and <a href="../units.html#length">lengths</a> may also be used to assign the position of the background image. Percentages are relative to the size of the element. Although lengths are allowed, they are not recommended due to their inherent weakness in dealing with differing display resolutions.</p>
+<p>When using percentages or lengths, the horizontal position is specified first, followed by the vertical position. A value such as <strong class=css>20% 65%</strong> specifies that the point 20% across and 65% down the image be placed at the point 20% across and 65% down the element. A value such as <strong class=css>5px 10px</strong> specifies that the upper left corner of the image be placed 5 pixels to the right of and 10 pixels below the upper left corner of the element.</p>
+<p>If only the horizontal value is given, the vertical position will be 50%. Combinations of lengths and percentages are allowed, as are negative positions. For example, <strong class=css>10% -2cm</strong> is permitted. However, percentages and lengths cannot be combined with keywords.</p>
+<p>The keywords are interpreted as follows:</p>
+<ul>
+<li><strong class=css>top left</strong> = <strong class=css>left top</strong> = <strong class=css>0% 0%</strong></li>
+<li><strong class=css>top</strong> = <strong class=css>top center</strong> = <strong class=css>center top</strong> = <strong class=css>50% 0%</strong></li>
+<li><strong class=css>right top</strong> = <strong class=css>top right</strong> = <strong class=css>100% 0%</strong></li>
+<li><strong class=css>left</strong> = <strong class=css>left center</strong> = <strong class=css>center left</strong> = <strong class=css>0% 50%</strong></li>
+<li><strong class=css>center</strong> = <strong class=css>center center</strong> = <strong class=css>50% 50%</strong></li>
+<li><strong class=css>right</strong> = <strong class=css>right center</strong> = <strong class=css>center right</strong> = <strong class=css>100% 50%</strong></li>
+<li><strong class=css>bottom left</strong> = <strong class=css>left bottom</strong> = <strong class=css>0% 100%</strong></li>
+<li><strong class=css>bottom</strong> = <strong class=css>bottom center</strong> = <strong class=css>center bottom</strong> = <strong class=css>50% 100%</strong></li>
+<li><strong class=css>bottom right</strong> = <strong class=css>right bottom</strong> = <strong class=css>100% 100%</strong></li>
+</ul>
+<p>If the background image is <a href="background-attachment.html">fixed</a> with regard to the canvas, the image is placed relative to the canvas instead of the element.</p>
+<p>Authors may also use the shorthand <strong class=css><a href="background.html">background</a></strong> property, which is currently better supported than the <strong class=css>background-position</strong> property.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

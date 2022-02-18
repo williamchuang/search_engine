@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Background and Color Properties</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="../font/index.html">
+<link rel=Next href="../text/index.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="Descriptions of the background and color properties of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, background and color properties, colour, answer">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Background and Color Properties<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<ul>
+<li><a href="#color">Color</a></li>
+<li><a href="#background-color">Background Color</a></li>
+<li><a href="#background-image">Background Image</a></li>
+<li><a href="#background-repeat">Background Repeat</a></li>
+<li><a href="#background-attachment">Background Attachment</a></li>
+<li><a href="#background-position">Background Position</a></li>
+<li><a href="#background">Background</a></li>
+</ul>
+<hr>
+<h2><a name="color">Color</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>color: <a href="../units.html#color">&lt;color&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Determined by browser<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>color</strong> property allows authors to specify the color of an element. See the <a href="../units.html#color">Units section</a> for color value descriptions. Some example color rules include:</p>
+<pre><code class=css>H1 { color: blue }
+H2 { color: #000080 }
+H3 { color: #0c0 }</code></pre>
+<p>To help avoid conflicts with user style sheets, <strong class=css><a href="#background">background</a></strong> and <strong class=css>color</strong> properties should always be specified together.</p>
+<hr width="67%" align=center>
+<h2><a name="background-color">Background Color</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-color: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><a href="../units.html#color">&lt;color&gt;</a> | transparent<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>transparent<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-color</strong> property sets the background color of an element. For example:</p>
+<pre><code class=css>BODY { background-color: white }
+H1   { background-color: #000080 }</code></pre>
+<p>To help avoid conflicts with user style sheets, <strong class=css><a href="#background-image">background-image</a></strong> should be specified whenever <strong class=css>background-color</strong> is used. In most cases, <strong class=css>background-image:&#160;none</strong> is suitable.</p>
+<p>Authors may also use the shorthand <strong class=css><a href="#background">background</a></strong> property, which is currently better supported than the <strong class=css>background-color</strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="background-image">Background Image</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-image: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><a href="../units.html#urls">&lt;url&gt;</a> | none<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>none<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-image</strong> property sets the background image of an element. For example:</p>
+<pre><code class=css>BODY { background-image: url(/images/foo.gif) }
+P    { background-image: url(http://www.htmlhelp.com/bg.png) }</code></pre>
+<p>When a background image is defined, a similar <a href="#background-color">background color</a> should also be defined for those not loading images.</p>
+<p>Authors may also use the shorthand <strong class=css><a href="#background">background</a></strong> property, which is currently better supported than the <strong class=css>background-image</strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="background-repeat">Background Repeat</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-repeat: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>repeat | repeat-x | repeat-y | no-repeat<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>repeat<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-repeat</strong> property determines how a specified <a href="#background-image">background image</a> is repeated. The <strong class=css>repeat-x</strong> value will repeat the image horizontally while the <strong class=css>repeat-y</strong> value will repeat the image vertically. For example:</p>
+<pre><code class=css>BODY { background: white url(candybar.gif);
+       background-repeat: repeat-x }</code></pre>
+<p>In the above example, the image will only be tiled horizontally.</p>
+<p>Authors may also use the shorthand <strong class=css><a href="#background">background</a></strong> property, which is currently better supported than the <strong class=css>background-repeat</strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="background-attachment">Background Attachment</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-attachment: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>scroll | fixed<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>scroll<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-attachment</strong> property determines if a specified <a href="#background-image">background image</a> will scroll with the content or be fixed with regard to the canvas. For example, the following specifies a fixed background image:</p>
+<pre><code class=css>BODY { background: white url(candybar.gif);
+       background-attachment: fixed }</code></pre>
+<p>Authors may also use the shorthand <strong class=css><a href="#background">background</a></strong> property, which is currently better supported than the <strong class=css>background-attachment</strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="background-position">Background Position</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background-position: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>[<a href="../units.html#percentage">&lt;percentage&gt;</a> | <a href="../units.html#length">&lt;length&gt;</a>]{1,2} | [top | center | bottom] || [left | center | right]<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>0% 0%<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>Block-level and replaced elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background-position</strong> property gives the initial position of a specified <a href="#background-image">background image</a>. This property may only be applied to <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level elements</a> and replaced elements. (A <dfn>replaced element</dfn> is one for which only the intrinsic dimensions are known; HTML replaced elements include <strong class=html>IMG</strong>, <strong class=html>INPUT</strong>, <strong class=html>TEXTAREA</strong>, <strong class=html>SELECT</strong>, and <strong class=html>OBJECT</strong>.)</p>
+<p>The easiest way to assign a background position is with keywords:</p>
+<ul>
+<li>Horizontal keywords (<strong class=css>left</strong>, <strong class=css>center</strong>, <strong class=css>right</strong>)</li>
+<li>Vertical keywords (<strong class=css>top</strong>, <strong class=css>center</strong>, <strong class=css>bottom</strong>)</li>
+</ul>
+<p><a href="../units.html#percentage">Percentages</a> and <a href="../units.html#length">lengths</a> may also be used to assign the position of the background image. Percentages are relative to the size of the element. Although lengths are allowed, they are not recommended due to their inherent weakness in dealing with differing display resolutions.</p>
+<p>When using percentages or lengths, the horizontal position is specified first, followed by the vertical position. A value such as <strong class=css>20% 65%</strong> specifies that the point 20% across and 65% down the image be placed at the point 20% across and 65% down the element. A value such as <strong class=css>5px 10px</strong> specifies that the upper left corner of the image be placed 5 pixels to the right of and 10 pixels below the upper left corner of the element.</p>
+<p>If only the horizontal value is given, the vertical position will be 50%. Combinations of lengths and percentages are allowed, as are negative positions. For example, <strong class=css>10% -2cm</strong> is permitted. However, percentages and lengths cannot be combined with keywords.</p>
+<p>The keywords are interpreted as follows:</p>
+<ul>
+<li><strong class=css>top left</strong> = <strong class=css>left top</strong> = <strong class=css>0% 0%</strong></li>
+<li><strong class=css>top</strong> = <strong class=css>top center</strong> = <strong class=css>center top</strong> = <strong class=css>50% 0%</strong></li>
+<li><strong class=css>right top</strong> = <strong class=css>top right</strong> = <strong class=css>100% 0%</strong></li>
+<li><strong class=css>left</strong> = <strong class=css>left center</strong> = <strong class=css>center left</strong> = <strong class=css>0% 50%</strong></li>
+<li><strong class=css>center</strong> = <strong class=css>center center</strong> = <strong class=css>50% 50%</strong></li>
+<li><strong class=css>right</strong> = <strong class=css>right center</strong> = <strong class=css>center right</strong> = <strong class=css>100% 50%</strong></li>
+<li><strong class=css>bottom left</strong> = <strong class=css>left bottom</strong> = <strong class=css>0% 100%</strong></li>
+<li><strong class=css>bottom</strong> = <strong class=css>bottom center</strong> = <strong class=css>center bottom</strong> = <strong class=css>50% 100%</strong></li>
+<li><strong class=css>bottom right</strong> = <strong class=css>right bottom</strong> = <strong class=css>100% 100%</strong></li>
+</ul>
+<p>If the background image is <a href="#background-attachment">fixed</a> with regard to the canvas, the image is placed relative to the canvas instead of the element.</p>
+<p>Authors may also use the shorthand <strong class=css><a href="#background">background</a></strong> property, which is currently better supported than the <strong class=css>background-position</strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="background">Background</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>background: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><a href="#background-color">&lt;background-color&gt;</a> || <a href="#background-image">&lt;background-image&gt;</a> || <a href="#background-repeat">&lt;background-repeat&gt;</a> || <a href="#background-attachment">&lt;background-attachment&gt;</a> || <a href="#background-position">&lt;background-position&gt;</a>
+<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Not defined<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>No<br></td>
+</tr>
+</table>
+<p>The <strong class=css>background</strong> property is a shorthand for the more specific background-related properties. Some examples of <strong class=css>background</strong> declarations follow:</p>
+<pre><code class=css>BODY       { background: white url(http://www.htmlhelp.com/foo.gif) }
+BLOCKQUOTE { background: #7fffd4 }
+P          { background: url(../backgrounds/pawn.png) #f0f8ff fixed }
+TABLE      { background: #0c0 url(leaves.jpg) no-repeat bottom right }</code></pre>
+<p>A value not specified will receive its initial value. For example, in the first three rules above, the <strong class=css><a href="#background-position">background-position</a></strong> property will be set to <strong class=css>0% 0%</strong>.</p>
+<p>To help avoid conflicts with user style sheets, <strong class=css>background</strong> and <strong class=css><a href="#color">color</a></strong> properties should always be specified together.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>
