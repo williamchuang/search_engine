@@ -1,0 +1,234 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Font Properties</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Next href="../color-background/index.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="Descriptions of the font properties of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, font properties, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Font Properties<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<ul>
+<li><a href="#font-family">Font Family</a></li>
+<li><a href="#font-style">Font Style</a></li>
+<li><a href="#font-variant">Font Variant</a></li>
+<li><a href="#font-weight">Font Weight</a></li>
+<li><a href="#font-size">Font Size</a></li>
+<li><a href="#font">Font</a></li>
+</ul>
+<hr>
+<h2><a name="font-family">Font Family</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-family: [[&lt;family-name&gt; | &lt;generic-family&gt;],]* [&lt;family-name&gt; | &lt;generic-family&gt;]<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>&lt;family-name&gt;<ul><li>Any font family name may be used</ul>
+		&lt;generic-family&gt;<ul>
+<li><strong class=css><span style="font-family: serif">serif</span></strong> (<i>e.g.</i>, <span style="font-family: Times">Times</span>)</li>
+<li><strong class=css><span style="font-family: sans-serif">sans-serif</span></strong> (<i>e.g.</i>, <span style="font-family: Arial">Arial</span> or <span style="font-family: Helvetica">Helvetica</span>)</li>
+<li><strong class=css><span style="font-family: cursive">cursive</span></strong> (<i>e.g.</i>, <span style="font-family: Zapf-Chancery">Zapf-Chancery</span>)</li>
+<li><strong class=css><span style="font-family: fantasy">fantasy</span></strong> (<i>e.g.</i>, <span style="font-family: Western">Western</span>)</li>
+<li><strong class=css><span style="font-family: monospace">monospace</span></strong> (<i>e.g.</i>, <span style="font-family: Courier">Courier</span>)</li>
+</ul></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Determined by browser<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>Font families may be assigned by a specific font name or a generic font family. Obviously, defining a specific font will not be as likely to match as a generic font family. Multiple family assignments can be made, and if a specific font assignment is made it should be followed by a generic family name in case the first choice is not present.</p>
+<p>A sample <strong class=css>font-family</strong> declaration might look like this:</p>
+<pre><code class=css>P { font-family: "New Century Schoolbook", Times, serif }</code></pre>
+<p>Notice that the first two assignments are specific type faces: <span style="font-family: 'New Century Schoolbook'">New Century Schoolbook</span> and <span style="font-family: Times">Times</span>. However, since both of them are <strong class=css><span style="font-family: serif">serif</span></strong> fonts, the generic font family is listed as a backup in case the system does not have either of these but has another <strong class=css><span style="font-family: serif">serif</span></strong> font which meets the qualifications.</p>
+<p>Any font name containing whitespace must be quoted, with either single or double quotes.</p>
+<p>The font family may also be given with the <strong class=css><a href="#font">font</a></strong> property.</p>
+<hr width="67%" align=center>
+<h2><a name="font-style">Font Style</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-style: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="font-style: normal">normal</span> | <span style="font-style: italic">italic</span> | <span style="font-style: oblique">oblique</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-style: normal">normal</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-style</strong> property defines that the font be displayed in one of three ways: <strong class=css><span style="font-style: normal">normal</span></strong>, <strong class=css><span style="font-style: italic">italic</span></strong> or <strong class=css><span style="font-style: oblique">oblique</span></strong> (slanted). A sample style sheet with <strong class=css>font-style</strong> declarations might look like this:</p>
+<pre><code class=css>H1 { font-style: oblique }
+P  { font-style: normal }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="font-variant">Font Variant</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-variant: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="font-variant: normal">normal</span> | <span style="font-variant: small-caps">small-caps</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-variant: normal">normal</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-variant</strong> property determines if the font is to display in <strong class=css><span style="font-variant: normal">normal</span></strong> or <strong class=css><span style="font-variant: small-caps">small-caps</span></strong>. Small-caps are displayed when all the letters of the word are in capitals with uppercase characters slightly larger than lowercase. Later versions of CSS may support additional variants such as condensed, expanded, small-caps numerals or other custom variants. An example of a font-variant assignment would be:</p>
+<pre><code class=css>SPAN { font-variant: small-caps }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="font-weight">Font Weight</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-weight: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="font-weight: normal">normal</span> | <span style="font-weight: bold">bold</span> | <span style="font-weight: bolder">bolder</span> | <span style="font-weight: lighter">lighter</span> | <span style="font-weight: 100">100</span> | <span style="font-weight: 200">200</span> | <span style="font-weight: 300">300</span> | <span style="font-weight: 400">400</span> | <span style="font-weight: 500">500</span> | <span style="font-weight: 600">600</span> | <span style="font-weight: 700">700</span> | <span style="font-weight: 800">800</span> | <span style="font-weight: 900">900</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-weight: normal">normal</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-weight</strong> property is used to specify the weight of the font. The <strong class=css><span style="font-weight: bolder">bolder</span></strong> and <strong class=css><span style="font-weight: lighter">lighter</span></strong> values are relative to the inherited font weight, while the other values are absolute font weights.</p>
+<div class=note>
+<p>Note: Since not all fonts have nine possible display weights some of the weights may be grouped together in assignment. If the specified weight is not available, an alternate will be chosen on the following basis:</p>
+<ul>
+<li><strong class=css><span style="font-weight: 500">500</span></strong> may be switched with <strong class=css><span style="font-weight: 400">400</span></strong>, and vice versa</li>
+<li><strong class=css><span style="font-weight: 100">100</span></strong>-<strong class=css><span style="font-weight: 300">300</span></strong> may be assigned to the next lighter weight, if any, or the next darker weight otherwise</li>
+<li><strong class=css><span style="font-weight: 600">600</span></strong>-<strong class=css><span style="font-weight: 900">900</span></strong> may be assigned to the next darker weight, if any, or the next lighter weight otherwise</li>
+</ul>
+</div>
+<p>Some example <strong class=css>font-weight</strong> assignments would be:</p>
+<pre><code class=css>H1 { font-weight: 800 }
+P  { font-weight: normal }</code></pre>
+<hr width="67%" align=center>
+<h2><a name="font-size">Font Size</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-size: &lt;absolute-size&gt; | &lt;relative-size&gt; | &lt;length&gt; | &lt;percentage&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>
+<ul>
+<li>&lt;absolute-size&gt;
+		<ul><li><span style="font-size: xx-small">xx-small</span> | <span style="font-size: x-small">x-small</span> | <span style="font-size: small">small</span> | <span style="font-size: medium">medium</span> | <span style="font-size: large">large</span> | <span style="font-size: x-large">x-large</span> | <span style="font-size: xx-large">xx-large</span></ul>
+<li>&lt;relative-size&gt;
+		<ul><li><span style="font-size: larger">larger</span> | <span style="font-size: smaller">smaller</span></ul>
+<li><a href="../units.html#length">&lt;length&gt;</a>
+<li><a href="../units.html#percentage">&lt;percentage&gt;</a> (in relation to parent element)
+</ul>
+	<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-size: medium">medium</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-size</strong> property is used to modify the size of the displayed font. Absolute lengths (using units like <strong class=css>pt</strong> and <strong class=css>in</strong>) should be used sparingly due to their weakness in adapting to different browsing environments. Fonts with absolute lengths can very easily be too small or too large for a user.</p>
+<p>Some example size assignments would be:</p>
+<pre><code class=css>H1     { font-size: large }
+P      { font-size: 12pt }
+LI     { font-size: 90% }
+STRONG { font-size: larger }</code></pre>
+<div class=note>
+<p>Authors should be aware that <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a>&#160;3.x incorrectly treats <strong class=css>em</strong> and <strong class=css>ex</strong> units as pixels, which can easily make text using these units unreadable. The browser also incorrectly applies percentage values relative to its default font size for the selector, rather than relative to the parent element's font size. This makes rules like</p>
+<pre><code class=css>H1 { font-size: 200% }</code></pre>
+<p>dangerous in that the size will be twice IE's default font size for level-one headings, rather than twice the parent element's font size. In this case, <strong class=html>BODY</strong> would most likely be the parent element, and it would likely define a <strong class=css>medium</strong> font size, whereas the default level-one heading font size imposed by IE would probably be considered <strong class=css>xx-large</strong>.</p>
+<p>Given these bugs, authors should take care in using percentage values for <strong class=css>font-size</strong>, and should probably avoid <strong class=css>em</strong> and <strong class=css>ex</strong> units for this property.</p>
+</div>
+<hr width="67%" align=center>
+<h2><a name="font">Font</a></h2>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>[ <a href="#font-style">&lt;font-style&gt;</a> || <a href="#font-variant">&lt;font-variant&gt;</a> || <a href="#font-weight">&lt;font-weight&gt;</a>&#160;]? <a href="#font-size">&lt;font-size&gt;</a> [&#160;/&#160;<a href="../text/line-height.html">&lt;line-height&gt;</a>&#160;]? <a href="#font-family">&lt;font-family&gt;</a><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Not defined<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font</strong> property may be used as a shorthand for the various font properties, as well as the <a href="../text/line-height.html">line height</a>. For example,</p>
+<pre><code class=css>P { font: italic bold 12pt/14pt Times, serif }</code></pre>
+<p>specifies paragraphs with a bold and italic Times or serif font with a size of 12 points and a line height of 14 points.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Font Family</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Next href="font-style.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the font-family property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, font-family property, font family, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Font Family<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-family: [[&lt;family-name&gt; | &lt;generic-family&gt;],]* [&lt;family-name&gt; | &lt;generic-family&gt;]<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top>&lt;family-name&gt;<ul><li>Any font family name may be used</ul>
+		&lt;generic-family&gt;<ul>
+<li><strong class=css><span style="font-family: serif">serif</span></strong> (<i>e.g.</i>, <span style="font-family: Times">Times</span>)</li>
+<li><strong class=css><span style="font-family: sans-serif">sans-serif</span></strong> (<i>e.g.</i>, <span style="font-family: Arial">Arial</span> or <span style="font-family: Helvetica">Helvetica</span>)</li>
+<li><strong class=css><span style="font-family: cursive">cursive</span></strong> (<i>e.g.</i>, <span style="font-family: Zapf-Chancery">Zapf-Chancery</span>)</li>
+<li><strong class=css><span style="font-family: fantasy">fantasy</span></strong> (<i>e.g.</i>, <span style="font-family: Western">Western</span>)</li>
+<li><strong class=css><span style="font-family: monospace">monospace</span></strong> (<i>e.g.</i>, <span style="font-family: Courier">Courier</span>)</li>
+</ul></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top>Determined by browser<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>Font families may be assigned by a specific font name or a generic font family. Obviously, defining a specific font will not be as likely to match as a generic font family. Multiple family assignments can be made, and if a specific font assignment is made it should be followed by a generic family name in case the first choice is not present.</p>
+<p>A sample <strong class=css>font-family</strong> declaration might look like this:</p>
+<pre><code class=css>P { font-family: "New Century Schoolbook", Times, serif }</code></pre>
+<p>Notice that the first two assignments are specific type faces: <span style="font-family: 'New Century Schoolbook'">New Century Schoolbook</span> and <span style="font-family: Times">Times</span>. However, since both of them are <strong class=css><span style="font-family: serif">serif</span></strong> fonts, the generic font family is listed as a backup in case the system does not have either of these but has another <strong class=css><span style="font-family: serif">serif</span></strong> font which meets the qualifications.</p>
+<p>Any font name containing whitespace must be quoted, with either single or double quotes.</p>
+<p>The font family may also be given with the <strong class=css><a href="font.html">font</a></strong> property.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

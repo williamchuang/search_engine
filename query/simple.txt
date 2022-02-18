@@ -1,0 +1,6 @@
+ant seven-eight-nine
+hello world
+WORLD  +   HELLO
+cardinal
+elephant aar* alpaca
+44four44 

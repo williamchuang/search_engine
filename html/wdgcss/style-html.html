@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en-us>
+<head>
+<title>Linking Style Sheets to HTML</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="index.html">
+<link rel=Up href="index.html">
+<link rel=Prev href="properties.html">
+<link rel=Next href="dependence.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="style.css" type="text/css">
+<link rel=StyleSheet href="aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="Details on how to link style sheets and HTML.">
+<meta name="keywords" content="web design group, wdg, style, stylesheet, style sheet, css, cascading style sheets, css1, html, html 4.0, html4, hypertext markup language, link, span, id, class, div, media, title, type, rel, persistent, preferred, default, alternate, print, screen, projection, projector, braille, aural, all, tty, tv, handheld, braille, media descriptor, descriptors, attribute values, value, element, tag, attribute">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Linking Style Sheets to HTML<img src="css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<p>There are many ways to link style sheets to HTML, each carrying its own advantages and disadvantages. New HTML elements and attributes have been introduced to allow easy incorporation of style sheets into HTML documents.</p>
+<ul>
+<li><a href="#external">Linking to an External Style Sheet</a></li>
+<li><a href="#embedding">Embedding a Style Sheet</a></li>
+<li><a href="#importing">Importing a Style Sheet</a></li>
+<li><a href="#inlining">Inlining Style</a></li>
+<li><a href="#class">The CLASS Attribute</a></li>
+<li><a href="#id">The ID Attribute</a></li>
+<li><a href="#span">The SPAN Element</a></li>
+<li><a href="#div">The DIV Element</a></li>
+<li><a href="#validation">A Note about Validation</a></li>
+</ul>
+<hr width="67%" align=center>
+<h2><a name="external">Linking to an External Style Sheet</a></h2>
+<p>An external style sheet may be linked to an HTML document through HTML's <strong class=html>LINK</strong> element:</p>
+<p class=example><a name="ex1"><code class=html>&lt;LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen&gt;<br>
+&lt;LINK REL=StyleSheet HREF="color-8b.css"
+ TYPE="text/css" TITLE="8-bit Color Style" MEDIA="screen, print"&gt;<br>
+&lt;LINK REL="Alternate StyleSheet" HREF="color-24b.css"
+ TYPE="text/css" TITLE="24-bit Color Style" MEDIA="screen, print"&gt;<br>
+&lt;LINK REL=StyleSheet HREF="aural.css" TYPE="text/css" MEDIA=aural&gt;</code></a></p>
+<p>The <strong class=html>&lt;LINK&gt;</strong> tag is placed in the document <strong class=html><a href="http://www.htmlhelp.com/reference/html40/head/head.html">HEAD</a></strong>. The optional <strong class=html>TYPE</strong> attribute is used to specify a media type--<strong class=html>text/css</strong> for a Cascading Style Sheet--allowing browsers to ignore style sheet types that they do not support. Configuring the server to send <strong>text/css</strong> as the <strong>Content-type</strong> for CSS files is also a good idea.</p>
+<div class=note>
+<p>External style sheets should <em>not</em> contain any HTML tags like <strong class=html>&lt;HEAD&gt;</strong> or <strong class=html>&lt;STYLE&gt;</strong>. The style sheet should consist merely of style rules or statements. A file consisting solely of</p>
+<p class=example><code class=css>P { margin: 2em }</code></p>
+<p>could be used as an external style sheet.</p>
+</div>
+<p>The <strong class=html>&lt;LINK&gt;</strong> tag also takes an optional <strong class=html>MEDIA</strong> attribute, which specifies the medium or media to which the style sheet should be applied.  Possible values are
+<ul>
+<li><strong class=html>screen</strong> (the default value), for presentation on non-paged computer screens;</li>
+<li><strong class=html>print</strong>, for output to a printer;</li>
+<li><strong class=html>projection</strong>, for projected presentations;</li>
+<li><strong class=html>aural</strong>, for speech synthesizers;</li>
+<li><strong class=html>braille</strong>, for presentation on braille tactile feedback devices;</li>
+<li><strong class=html>tty</strong>, for character cell displays (using a fixed-pitch font);</li>
+<li><strong class=html>tv</strong>, for televisions;</li>
+<li><strong class=html>all</strong>, for all output devices.</li>
+</ul>
+<p>Multiple media are specified through a comma-separated list or the value <strong class=html>all</strong>.</p>
+<p class=note><a href="http://home.netscape.com/comprod/products/communicator/navigator.html">Netscape Navigator 4.<var>x</var></a> incorrectly ignores any linked or <a href="#embedding">embedded</a> style sheets declared with <strong class=html>MEDIA</strong> values other than <strong class=html>screen</strong>. For example, <strong class=html>MEDIA="screen, projection"</strong> will cause the style sheet to be ignored by Navigator 4.<var>x</var>, even if the presentation device is a computer screen. Navigator 4.<var>x</var> also ignores style sheets declared with <strong class=html>MEDIA=all</strong>.</p>
+<p>The <strong class=html>REL</strong> attribute is used to define the relationship between the linked file and the HTML document. <strong class=html>REL=StyleSheet</strong> specifies a <em>persistent</em> or <em>preferred</em> style while <strong class=html>REL="Alternate StyleSheet"</strong> defines an <em>alternate</em> style. A <dfn>persistent</dfn> style is one that is always applied when style sheets are enabled. The absence of the <strong class=html>TITLE</strong> attribute, as in the first <strong class=html>&lt;LINK&gt;</strong> tag in the <a href="#ex1">example</a>, defines a persistent style.</p>
+<p>A <dfn>preferred</dfn> style is one that is automatically applied, such as in the second <strong class=html>&lt;LINK&gt;</strong> tag in the <a href="#ex1">example</a>.  The combination of <strong class=html>REL=StyleSheet</strong> and a <strong class=html>TITLE</strong> attribute specifies a preferred style. Authors cannot specify more than one preferred style.</p>
+<p>An <dfn>alternate</dfn> style is indicated by <strong class=html>REL="Alternate StyleSheet"</strong>. The third <strong class=html>&lt;LINK&gt;</strong> tag in the <a href="#ex1">example</a> defines an alternate style, which the user could choose to replace the preferred style sheet.</p>
+<p class=note>Note that current browsers generally lack the ability to choose alternate styles.</p>
+<p><a name="link-combining">A single style may also be given through multiple style sheets:</a></p>
+<p class=example><code class=html>&lt;LINK REL=StyleSheet HREF="basics.css" TITLE="Contemporary"&gt;<br>
+&lt;LINK REL=StyleSheet HREF="tables.css" TITLE="Contemporary"&gt;<br>
+&lt;LINK REL=StyleSheet HREF="forms.css" TITLE="Contemporary"&gt;</code></p>
+<p>In this example, three style sheets are combined into one "Contemporary" style that is applied as a preferred style sheet. To combine multiple style sheets into a single style, one must use the same <strong class=html>TITLE</strong> with each style sheet.</p>
+<p>An external style sheet is ideal when the style is applied to numerous pages. With an external style sheet, an author could change the look of an entire site by simply changing one file. As well, most browsers will cache an external style sheet, thus avoiding a delay in page presentation once the style sheet is cached.</p>
+<p class=note><a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a> 3 for Windows 95/NT4 does not support <strong class=html><a href="http://www.htmlhelp.com/reference/html40/html/body.html">BODY</a></strong> <a href="color-background/background.html">background</a> images or colors from linked style sheets. Given this bug, authors may wish to provide another mechanism for including a background image or color, such as <a href="#embedding">embedding</a> or <a href="#inlining">inlining</a> the style, or by using the <strong class=html>BACKGROUND</strong> attribute of the <strong class=html><a href="http://www.htmlhelp.com/reference/html40/html/body.html">BODY</a></strong> element.</p>
+<hr width="67%" align=center>
+<h2><a name="embedding">Embedding a Style Sheet</a></h2>
+<p>A style sheet may be embedded in a document with the <strong class=html>STYLE</strong> element:</p>
+<pre class=example><code class=html>&lt;STYLE TYPE="text/css" MEDIA=screen&gt;</code>
+<code class=css>&lt;!--
+  BODY  { background: url(foo.gif) red; color: black }
+  P EM  { background: yellow; color: black }
+  .note { margin-left: 5em; margin-right: 5em }
+--&gt;</code>
+<code class=html>&lt;/STYLE&gt;</code></pre>
+<p>The <strong class=html>STYLE</strong> element is placed in the document <strong class=html>HEAD</strong>. The required <strong class=html>TYPE</strong> attribute is used to specify a media type, as is its function with the <strong class=html><a href="#external">LINK</a></strong> element. Similarly, the <strong class=html>TITLE</strong> and <strong class=html>MEDIA</strong> attributes may also be specified with <strong class=html>STYLE</strong>.</p>
+<p>Older browsers, unaware of the <strong class=html>STYLE</strong> element, would normally show its contents as if they were part of the <strong class=html>BODY</strong>, thus making the style sheet visible to the user. To prevent this, the contents of the <strong class=html>STYLE</strong> element are contained within an SGML comment (<strong class=html>&lt;!-- comment --&gt;</strong>), as in the preceding example.</p>
+<p>An embedded style sheet should be used when a single document has a unique style. If the same style sheet is used in multiple documents, then an <a href="#external">external style sheet</a> would be more appropriate.</p>
+<hr width="67%" align=center>
+<h2><a name="importing">Importing a Style Sheet</a></h2>
+<p>A style sheet may be <em>imported</em> with CSS's <strong class=css>@import</strong> statement. This statement may be used in a CSS file or inside the <strong class=html>STYLE</strong> element:</p>
+<pre class=example><code class=html>&lt;STYLE TYPE="text/css" MEDIA="screen, projection"&gt;</code>
+<code class=css>&lt;!--
+  @import url(http://www.htmlhelp.com/style.css);
+  @import url(/stylesheets/punk.css);
+  DT { background: yellow; color: black }
+--&gt;</code>
+<code class=html>&lt;/STYLE&gt;</code></pre>
+<p>Note that other CSS rules may still be included in the <strong class=html>STYLE</strong> element, but that all <strong class=css>@import</strong> statements must occur at the start of the style sheet. Any rules specified in the style sheet itself override conflicting rules in the imported style sheets. For example, even if one of the imported style sheets contained <strong class=css>DT&#160;{&#160;background:&#160;aqua&#160;}</strong>, definition terms would still have a yellow background.</p>
+<p>The order in which the style sheets are imported is important in determining how they cascade. In the above example, if the <strong class=css>style.css</strong> imported style sheet specified that <strong class=html>STRONG</strong> elements be shown in red and the <strong class=css>punk.css</strong> style sheet specified that <strong class=html>STRONG</strong> elements be shown in yellow, then the latter rule would win out, and <strong class=html>STRONG</strong> elements would be in yellow.</p>
+<p>Imported style sheets are useful for purposes of modularity. For example, a site may separate different style sheets by the selectors used. There may be a simple.css style sheet that gives rules for common elements such as <strong class=html>BODY</strong>, <strong class=html>P</strong>, <strong class=html>H1</strong>, and <strong class=html>H2</strong>. In addition, there may be an extra.css style sheet that gives rules for less common elements such as <strong class=html>CODE</strong>, <strong class=html>BLOCKQUOTE</strong>, and <strong class=html>DFN</strong>. A tables.css style sheet may be used to define rules for table elements. These three style sheets could be included in HTML documents, as needed, with the <strong class=css>@import</strong> statement. The three style sheets could also be <a href="#link-combining">combined</a> via the <strong class=html><a href="#external">LINK</a></strong> element.</p>
+<hr width="67%" align=center>
+<h2><a name="inlining">Inlining Style</a></h2>
+<p>Style may be inlined using the <strong class=html>STYLE</strong> attribute. The <strong class=html>STYLE</strong> attribute may be applied to any <strong class=html><a href="http://www.htmlhelp.com/reference/html40/html/body.html">BODY</a></strong> element (including <strong class=html>BODY</strong> itself) except for <strong class=html><a href="http://www.htmlhelp.com/reference/html40/special/basefont.html">BASEFONT</a></strong>, <strong class=html><a href="http://www.htmlhelp.com/reference/html40/special/param.html">PARAM</a></strong>, and <strong class=html><a href="http://www.htmlhelp.com/reference/html40/special/script.html">SCRIPT</a></strong>. The attribute takes as its value any number of CSS declarations, where each declaration is separated by a semicolon. An example follows:</p>
+<p class=example><code class=html>&lt;P STYLE="</code><code class=css>color: red; font-family: 'New Century Schoolbook', serif</code><code class=html>"&gt;
+This paragraph is styled in red with the New Century Schoolbook font,
+if available.&lt;/P&gt;</code></p>
+<p>Note that <strong class=css>New Century Schoolbook</strong> is contained within single quotes in the <strong class=html>STYLE</strong> attribute since double quotes are used to contain the style declarations.</p>
+<p>Inlining style is far more inflexible than the other methods. To use inline style, one must declare a single style sheet language for the entire document using the <strong>Content-Style-Type</strong> HTTP header extension. With inlined CSS, an author must send <strong>text/css</strong> as the <strong>Content-Style-Type</strong> HTTP header or include the following tag in the <strong class=html><a href="http://www.htmlhelp.com/reference/html40/head/head.html">HEAD</a></strong>:</p>
+<p class=example><code class=html>&lt;META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css"&gt;</code></p>
+<p>Inlining style loses many of the advantages of style sheets by mixing content with presentation. As well, inlined styles implicitly apply to all media, since there is no mechanism for specifying the intended medium for an inlined style. This method should be used sparingly, such as when a style is to be applied on all media to a single occurrence of an element. If the style should be applied to a single element instance but only with certain media, use the <strong class=html><a href="#id">ID</a></strong> attribute instead of the <strong class=html>STYLE</strong> attribute.</p>
+<hr width="67%" align=center>
+<h2><a name="class">The CLASS Attribute</a></h2>
+<p>The <strong class=html>CLASS</strong> attribute is used to specify the style class to which the element belongs. For example, the style sheet may have created the <strong class=css>punk</strong> and <strong class=css>warning</strong> classes:</p>
+<pre class=example><code class=css>.punk     { color: lime; background: #ff80c0 }
+P.warning { font-weight: bolder; color: red; background: white }</code></pre>
+<p>These classes could be referenced in HTML with the <strong class=html>CLASS</strong> attribute:</p>
+<p class=example><code class=html>&lt;H1 CLASS=punk&gt;Proprietary Extensions&lt;/H1&gt;<br>
+&lt;P CLASS=warning&gt;Many proprietary extensions can have negative
+side-effects, both on supporting and non-supporting browsers...</code></p>
+<p>In this example, the <strong class=css>punk</strong> class may be applied to any <strong class=html>BODY</strong> element since it does not have an HTML element associated with it in the style sheet. Using the example's style sheet, the <strong class=css>warning</strong> class may only be applied to the <strong class=html>P</strong> element.</p>
+<p class=note>A good practice is to name classes according to their <em>function</em> rather than their <em>appearance</em>. The <strong class=css>warning</strong> class in the previous example could have been named <strong class=css>red</strong>, but this name would become meaningless if the author decided to change the style of the class to a different color, or if the author wished to define an aural style for those using speech synthesizers.</p>
+<p>Classes can be a very effective method of applying different styles to structurally identical sections of an HTML document. For example, this page uses classes to give a different style to CSS code and HTML code.</p>
+<hr width="67%" align=center>
+<h2><a name="id">The ID Attribute</a></h2>
+<p>The <strong class=html>ID</strong> attribute is used to define a unique style for an element. A CSS rule such as</p>
+<p class=example><code class=css>#wdg97 { font-size: larger }</code></p>
+<p>may be applied in HTML through the <strong class=html>ID</strong> attribute:</p>
+<p class=example><code class=html>&lt;P ID=wdg97&gt;Welcome to the Web Design Group!&lt;/P&gt;</code></p>
+<p>Each <strong class=html>ID</strong> attribute must have a unique value over the document. The value must be an initial letter followed by letters, digits, or hyphens. The letters are restricted to A-Z and a-z.</p>
+<p class=note>Note that <a href="http://www.w3.org/TR/REC-html40/types.html#type-id">HTML 4.0 allows</a> periods in <strong class=html>ID</strong> attribute values, but <a href="http://www.w3.org/TR/REC-CSS1#forward-compatible-parsing">CSS1 does not allow</a> periods in ID selectors. Also note that CSS1 allows the Unicode characters 161-255 as well as escaped Unicode characters as a numeric code, but HTML 4.0 does not allow these characters in an <strong class=html>ID</strong> attribute value.</p>
+<p>The use of <strong class=html>ID</strong> is appropriate when a style only needs to be applied once in any document. <strong class=html>ID</strong> contrasts with the <strong class=html><a href="#inlining">STYLE</a></strong> attribute in that the former allows medium-specific styles and can also be applied to multiple documents (though only once in each document).</p>
+<hr width="67%" align=center>
+<h2><a name="span">The SPAN Element</a></h2>
+<p>The <strong class=html>SPAN</strong> element was introduced into HTML to allow authors to give style that could not be attached to a structural HTML element. <strong class=html>SPAN</strong> may be used as a selector in a style sheet, and it also accepts the <strong class=html><a href="#inlining">STYLE</a></strong>, <strong class=html><a href="#class">CLASS</a></strong>, and <strong class=html><a href="#id">ID</a></strong> attributes.</p>
+<p><strong class=html>SPAN</strong> is an <a href="http://www.htmlhelp.com/reference/html40/inline.html">inline element</a>, so it may be used just as elements such as <strong class=html>EM</strong> and <strong class=html>STRONG</strong> in HTML. The important distinction is that while <strong class=html>EM</strong> and <strong class=html>STRONG</strong> carry structural meaning, <strong class=html>SPAN</strong> has no such meaning. It exists purely to apply style, and so has no effect when the style sheet is disabled.</p>
+<p>Some examples of <strong class=html>SPAN</strong> follow:</p>
+<pre class=example><code class=html>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Draft//EN"&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+&lt;TITLE&gt;Example of SPAN&lt;/TITLE&gt;
+&lt;META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css"&gt;
+&lt;STYLE TYPE="text/css" MEDIA="screen, print, projection"&gt;</code>
+<code class=css>&lt;!--
+  .firstwords { font-variant: small-caps }
+--&gt;</code>
+<code class=html>&lt;/STYLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+&lt;P&gt;&lt;SPAN CLASS=firstwords&gt;The first few words&lt;/SPAN&gt; of a
+paragraph could be in small-caps. Style may also be inlined, such as
+to change the style of a word like &lt;SPAN STYLE="</code><code class=css>font-family: Arial</code><code class=html>"&gt;
+Arial&lt;/SPAN&gt;.&lt;/P&gt;</code></pre>
+<hr width="67%" align=center>
+<h2><a name="div">The DIV Element</a></h2>
+<p>The <strong class=html>DIV</strong> element is similar to the <strong class=html><a href="#span">SPAN</a></strong> element in function, with the main difference being that <strong class=html>DIV</strong> (short for "division") is a <a href="http://www.htmlhelp.com/reference/html40/block.html">block-level element</a>. <strong class=html>DIV</strong> may contain paragraphs, headings, tables, and even other divisions. This makes <strong class=html>DIV</strong> ideal for marking different classes of containers, such as a chapter, abstract, or note. For example:</p>
+<p class=example><code class=html>&lt;DIV CLASS=note&gt;<br>
+&lt;H1&gt;Divisions&lt;/H1&gt;<br>
+&lt;P&gt;The DIV element is defined in HTML 3.2, but only the ALIGN
+attribute is permitted in HTML 3.2. HTML 4.0 adds the CLASS, STYLE,
+and ID attributes, among others.&lt;/P&gt;<br>
+&lt;P&gt;Since DIV may contain other block-level containers, it is useful
+for marking large sections of a document, such as this note.&lt;/P&gt;<br>
+&lt;P&gt;The closing tag is required.&lt;/P&gt;<br>
+&lt;/DIV&gt;</code></p>
+<hr width="67%" align=center>
+<h2><a name="validation">A Note about Validation</a></h2>
+<p>Few CSS-styled documents will validate at the <a href="http://www.htmlhelp.com/reference/wilbur/">HTML 3.2 (Wilbur)</a> level. HTML 3.2 does not define the <strong class=html><a href="#span">SPAN</a></strong> element, nor the <strong class=html><a href="#class">CLASS</a></strong>, <strong class=html><a href="#inlining">STYLE</a></strong>, or <strong class=html><a href="#id">ID</a></strong> attributes, and also lacks support for the <strong class=html>TYPE</strong> and <strong class=html>MEDIA</strong> attributes on the <strong class=html><a href="#external">LINK</a></strong> and <strong class=html><a href="#embedding">STYLE</a></strong> elements.</p>
+<p>These style-related elements and attributes are not harmful to non-supporting browsers, as they are safely ignored. Documents using these elements and attributes may be validated against <a href="http://www.w3.org/TR/REC-html40/">HTML 4.0</a>.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="index.html">CSS Index</a> ~ <a href="structure.html">CSS Structure</a> ~ <a href="properties.html">CSS Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997-98 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

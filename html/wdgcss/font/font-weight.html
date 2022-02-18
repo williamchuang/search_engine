@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en>
+<head>
+<title>Font Weight</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="../index.html">
+<link rel=Prev href="font-variant.html">
+<link rel=Next href="font-size.html">
+<link rel=Up href="../properties.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="../style.css" type="text/css">
+<link rel=StyleSheet href="../aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="A description of the font-weight property of Cascading Style Sheets, level 1.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, font-weight property, font weight, bold, answer">
+<meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="../wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Font Weight<img src="../css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<table cellpadding=5>
+<tr>
+	<th valign=top align=left><b>Syntax:</b> </th> 
+	<td valign=top>font-weight: &lt;value&gt;<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Possible Values:</b> </th> 
+	<td valign=top><span style="font-weight: normal">normal</span> | <span style="font-weight: bold">bold</span> | <span style="font-weight: bolder">bolder</span> | <span style="font-weight: lighter">lighter</span> | <span style="font-weight: 100">100</span> | <span style="font-weight: 200">200</span> | <span style="font-weight: 300">300</span> | <span style="font-weight: 400">400</span> | <span style="font-weight: 500">500</span> | <span style="font-weight: 600">600</span> | <span style="font-weight: 700">700</span> | <span style="font-weight: 800">800</span> | <span style="font-weight: 900">900</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Initial Value:</b> </th> 
+	<td valign=top><span style="font-weight: normal">normal</span><br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Applies to:</b> </th> 
+	<td valign=top>All elements<br></td>
+</tr>
+<tr>
+	<th valign=top align=left><b>Inherited:</b> </th> 
+	<td valign=top>Yes<br></td>
+</tr>
+</table>
+<p>The <strong class=css>font-weight</strong> property is used to specify the weight of the font. The <strong class=css><span style="font-weight: bolder">bolder</span></strong> and <strong class=css><span style="font-weight: lighter">lighter</span></strong> values are relative to the inherited font weight, while the other values are absolute font weights.</p>
+<div class=note>
+<p>Note: Since not all fonts have nine possible display weights some of the weights may be grouped together in assignment. If the specified weight is not available, an alternate will be chosen on the following basis:</p>
+<ul>
+<li><strong class=css><span style="font-weight: 500">500</span></strong> may be switched with <strong class=css><span style="font-weight: 400">400</span></strong>, and vice versa</li>
+<li><strong class=css><span style="font-weight: 100">100</span></strong>-<strong class=css><span style="font-weight: 300">300</span></strong> may be assigned to the next lighter weight, if any, or the next darker weight otherwise</li>
+<li><strong class=css><span style="font-weight: 600">600</span></strong>-<strong class=css><span style="font-weight: 900">900</span></strong> may be assigned to the next darker weight, if any, or the next lighter weight otherwise</li>
+</ul>
+</div>
+<p>Some example <strong class=css>font-weight</strong> assignments would be:</p>
+<pre><code class=css>H1 { font-weight: 800 }
+P  { font-weight: normal }</code></pre>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="../wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="../index.html">CSS&#160;Index</a>&#160;~ <a href="../structure.html">CSS&#160;Structure</a>&#160;~ <a href="../properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>

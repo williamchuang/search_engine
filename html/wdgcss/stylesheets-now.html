@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang=en-US>
+<head>
+<title>Style Sheets Now!</title>
+<link rev=Made href="mailto:liam@htmlhelp.com">
+<link rel=Start href="index.html">
+<link rel=Up href="index.html">
+<link rel=Next href="quick-tutorial.html">
+<link rel=Glossary href="http://www.htmlhelp.com/glossary/glossary.html">
+<link rel=Copyright href="http://www.htmlhelp.com/copyright.html">
+<link rel=StyleSheet href="style.css" type="text/css">
+<link rel=StyleSheet href="aural.css" type="text/css" media=aural>
+<meta name="author" content="John Pozadzides/Liam Quinn">
+<meta name="description" content="Change the appearance of hundreds of Web pages by changing just one file... Influence presentation without losing visitors... All with the power and flexibility of Web style sheets.">
+<meta name="keywords" content="html authoring, newsgroup, web design group, web page design, help, frequently asked questions, internet help, site creation, page creation, site design, page design, site layout, page layout, html, hypertext markup language, hyper text markup language, questions, graphics, validation, validators, www pages, html 3.2, wilbur, help files, tutorials, articles, reference material, guide, wdg, style, stylesheet, style sheet, css, cascading style sheets, answer">
+</head>
+<body bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#000080">
+<h2><img src="wdglogo1.gif" width=250 height=83 alt="The Web Design Group"></h2>
+<h1 align=center>Style Sheets Now!<img src="css.gif" alt="" align=right width=99 height=73 hspace=5></h1>
+<hr>
+<p>Web style sheets have been around for a number of years, but their power and importance went largely unnoticed since few implementations existed. Web authors, anxious to add creativity to their pages by influencing the presentation, began to use Netscape's proprietary extensions rather than the more powerful style sheets. This was quite natural, since Netscape's proprietary extensions could be seen by a significant portion of Web users, while few would see style sheet enhancements.</p>
+<p>Today, more and more browsers are implementing style sheets, opening authors' eyes to unique features that allow influence over presentation while preserving platform independence. The advantages of style sheets became apparent, as did the disadvantages of continually creating more HTML tags for presentation effects.</p>
+<p>Netscape's <strong class=html>BODY</strong> attributes are now widely accepted on the Web, and have become standardized in <a href="http://www.htmlhelp.com/reference/wilbur/">HTML&#160;3.2</a>. Yet <strong class=html>BGCOLOR</strong>, <strong class=html>TEXT</strong> and friends simply do not provide the flexibility of style sheets. Most background images would leave a page unreadable to someone whose display only offered 16 colors; many pages are difficult to read with only 256 colors. With conventional <strong class=html>BODY</strong> attributes, an author must choose whether the benefits of a background image outweigh the costs; with style sheets, an author can offer a number of different images, in different style sheets, so that the user can choose the "24-bit style sheet" or "8-bit style sheet," depending on how many colors his or her system can display. If no author-supplied style suits the user, he or she can simply ignore the author's style.</p>
+<p>Style sheets can make an author's life much easier. While one could use <strong class=html>&lt;HR WIDTH="75%" SIZE=5 ALIGN=center&gt;</strong> for every horizontal rule, this becomes very cumbersome for the author. With style sheets, one only needs to specify such presentational preferences <em>once</em>, and the style can be applied to an entire site. And if the author decides that <strong class=html>WIDTH="50%"</strong> would be better, then he or she only needs to change this preference in <em>one place</em>, rather than having to search through hundreds of pages to change the HTML. Not only that, but style sheets also reduce download time when one file contains all the style information.</p>
+<p>Style sheets also offer much more flexibility in terms of the presentation effects that they provide. Properties such as color, background, margin, border, and many more can be applied to <em>all elements</em>. With just HTML and its proprietary extensions, one must rely on attributes like <strong class=html>BGCOLOR</strong>, which are only available for a few elements. Style sheets give the flexibility of applying a style to all paragraphs, or all level-two headings, or all emphasized text.</p>
+<p>With style sheets, authors can use the <strong class=css><a href="text/text-indent.html">text-indent</a></strong> property to indent text, rather than resorting to ugly kludges like <strong class=html>&lt;DD&gt;</strong> or <strong class=html>&lt;IMG SRC="blank.gif" WIDTH=10 ALT=""&gt;</strong> that carry with them many negative side-effects. Margins can be suggested without having to put the entire page in a table. Style sheets also reduce the need for multi-file search and replace; if an author decides to change the indentation of all paragraphs on a site, he or she only has to change one line on a style sheet.</p>
+<p>Style sheets represent an enormous step forward for the Web. With the separation of content and presentation between HTML and style sheets, the Web no longer needs to drift away from the strong ideal of platform independence that provided the medium with its initial push of popularity. Authors can finally influence the presentation of documents without leaving pages unreadable to users.</p>
+<hr width="67%" align=center>
+<h2>Current Browser Support for CSS</h2>
+<p>The number of browsers supporting Cascading Style Sheets continues to increase rapidly. <a href="http://home.netscape.com/comprod/products/communicator/navigator.html">Netscape Navigator&#160;4.0</a> features a large amount of support for CSS1 and <a href="http://www.w3.org/TR/WD-positioning">CSS Positioning</a>. <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a>&#160;3 has partial CSS1 support with a strong level of CSS1 and <a href="http://www.w3.org/TR/WD-positioning">CSS Positioning</a> implemented in <a href="http://www.microsoft.com/ie/ie40/">IE4</a>, accompanied by early support for <a href="http://www.w3.org/TR/WD-print">CSS Printing</a>.</p>
+<p>Style sheet support on the UNIX platform has long existed with <a href="http://www.cs.indiana.edu/elisp/w3/docs.html">Emacs-W3</a> and <a href="http://www.yggdrasil.com/Products/Arena/">Arena</a>, and the W3C's <a href="http://www.w3.org/Amaya/">Amaya</a> browser combines <a href="http://www.w3.org/Amaya/User/CSS.html">CSS support</a> with a "WYSIWYG" editor for making CSS-enhanced Web pages.</p>
+<hr width="67%" align=center>
+<h2>Beyond CSS1</h2>
+<p>Future extensions to CSS1 are aimed at bringing better support for <a href="http://www.w3.org/TR/WD-print">printing Web pages</a>, <a href="http://www.w3.org/TR/WD-acss">styles for speech</a> and braille output, <a href="http://www.w3.org/TR/WD-positioning">positioning</a>, <a href="http://www.w3.org/TR/WD-font">fonts</a>, and device-independent colors.</p>
+<hr width="60%" align=right>
+<p align=right>Maintained by <a href="mailto:john@htmlhelp.com">John&#160;Pozadzides</a> and <a href="mailto:liam@htmlhelp.com">Liam&#160;Quinn</a></p>
+<hr>
+<p class=toolbar align=center><a href="http://www.htmlhelp.com/"><img src="wdglogo-small.gif" width=105 height=40 alt="Web Design Group ~ "></a><a href="index.html">CSS&#160;Index</a>&#160;~ <a href="structure.html">CSS&#160;Structure</a>&#160;~ <a href="properties.html">CSS&#160;Properties</a></p>
+<p align=center><small><a href="http://www.htmlhelp.com/copyright.html">Copyright &#169;</a> 1997 John Pozadzides and Liam Quinn. All rights reserved.</small></p>
+</body>
+</html>
