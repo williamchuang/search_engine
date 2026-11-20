@@ -1,0 +1,6 @@
+username=
+password=
+database=
+
+# hostname:port of the MySQL server
+hostname=localhost:3306
